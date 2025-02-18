@@ -1,21 +1,30 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-    background-color: #f4f4f4;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
 header {
     background-color: #333;
-    padding: 10px 0;
+    padding: 20px;
     text-align: center;
 }
 
 header nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 header nav ul li {
@@ -25,23 +34,58 @@ header nav ul li {
 
 header nav ul li a {
     color: white;
-    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
 }
 
-section {
-    padding: 40px 20px;
-    margin: 20px;
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+header nav ul li a:hover {
+    color: #f4f4f4;
 }
 
+/* Hero Section */
 #intro {
     background-color: #f7f7f7;
+    text-align: center;
+    padding: 60px 20px;
 }
 
 #intro h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#intro p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #333;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #444;
+}
+
+/* Services Section */
+#services {
+    padding: 40px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+#services h2 {
     font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 40px;
 }
 
 #services .section {
@@ -52,22 +96,70 @@ section {
 
 #services .box {
     width: 30%;
-    padding: 20px;
+    padding: 30px;
     background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#gallery .gallery-container {
+#services .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#services .box h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+#services .box p {
+    font-size: 1.2em;
+}
+
+/* Gallery Section */
+#gallery {
+    padding: 40px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.gallery-container {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 #gallery img {
-    width: 200px;
-    height: 150px;
+    width: 300px;
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Booking Section */
+#booking {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+#booking h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 30px;
 }
 
 form {
@@ -76,17 +168,29 @@ form {
     align-items: center;
     max-width: 500px;
     margin: 0 auto;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 form label {
     margin: 10px 0;
+    font-size: 1.2em;
 }
 
 form select, form input, form button {
-    padding: 10px;
+    padding: 12px;
     margin: 5px 0;
     width: 100%;
     max-width: 300px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form select, form input {
+    background-color: #fff;
 }
 
 form button {
@@ -94,41 +198,41 @@ form button {
     color: white;
     border: none;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
 }
 
 form button:hover {
     background-color: #444;
 }
 
-.cta-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.cta-button:hover {
-    background-color: #444;
-}
-
+/* Footer */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px;
+    margin-top: 40px;
 }
 
+footer p {
+    font-size: 1.2em;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     #services .section {
         flex-direction: column;
+        align-items: center;
     }
 
     #services .box {
-        width: 100%;
+        width: 80%;
         margin: 10px 0;
+    }
+
+    #gallery img {
+        width: 100%;
+        height: auto;
     }
 }
