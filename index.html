@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idealab Mec</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#intro">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#booking">Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Intro Section -->
+    <section id="intro">
+        <h1>Welcome to Idealab Mec</h1>
+        <p>Your innovation starts here. Explore our state-of-the-art equipment and bring your ideas to life!</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>3D Printing</li>
+            <li>CNC Cutting</li>
+            <li>Soldering and Tool Rentals</li>
+            <li>Project Assistance</li>
+        </ul>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2>Project Gallery</h2>
+        <div class="gallery-container">
+            <img src="image1.jpg" alt="Project 1">
+            <img src="image2.jpg" alt="Project 2">
+            <img src="image3.jpg" alt="Project 3">
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking">
+        <h2>Book Equipment</h2>
+        <form id="booking-form">
+            <label for="equipment">Select Equipment:</label>
+            <select id="equipment" name="equipment">
+                <option value="3d-printer">3D Printer</option>
+                <option value="cnc-cutting">CNC Cutting Machine</option>
+                <option value="soldering">Soldering Equipment</option>
+            </select>
+            <label for="time">Select Time:</label>
+            <input type="datetime-local" id="time" name="time">
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Idealab Mec. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
